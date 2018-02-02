@@ -97,7 +97,7 @@
 
 .nav ul {
   display: flex;
-  width: 930px;
+  width: 800px;
 }
 
 .nav ul li {
@@ -121,11 +121,37 @@
 }
 
 .nav ul li div {
+  background: #fff;
+  display: none;
   position: absolute;
-  top: 0px;
+  top: 146px;
   left: 0px;
-  width: 1280px;
-  padding: 50px;
+  width: 1263px;
+  z-index: 1000;
+  padding: 20px;
+  padding-top: 50px;
+  opacity: 1;
+}
+
+.nav ul li div ul {
+  width: 400px;
+  display: flex;
+  flex-flow: wrap;
+  float: left;
+}
+
+.nav ul li div ul li {
+  display: block;
+  height: 30px;
+  width: 50%;
+}
+
+.nav ul li div ul li a {
+  display: block;
+  width: 30px;
+  width: 100px;
+  text-align: left;
+  color: #000;
 }
 
 .nav .form {
@@ -147,4 +173,8 @@
   position: absolute;
   top: 13px;
   left: 200px;
+}
+
+.lbt {
+  width: 100%;
 }
