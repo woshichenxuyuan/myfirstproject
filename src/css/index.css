@@ -178,3 +178,41 @@
 .lbt {
   width: 100%;
 }
+
+.main {
+  width: 100%;
+}
+
+.main .container {
+  padding-top: 50px;
+}
+
+.main .container ul li {
+  width: 600px;
+  float: left;
+}
+
+.main .container ul li a {
+  display: block;
+  width: 590px;
+  height: 448px;
+  margin-right: 10px;
+}
+
+.main .container ul li a img {
+  width: 590px;
+  height: 300px;
+}
+
+.main .container ul li a h2 {
+  font-size: 26px;
+  color: #000;
+}
+
+.main .container ul li a:hover {
+  color: #F8A120;
+}
+
+.main .container ul li a:hover h2 {
+  color: #F8A120;
+}

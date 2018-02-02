@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="lib/carousel/carousel.css" />
     <script type="text/javascript" src="lib/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="lib/carousel/carousel.js"></script>
-    <script type="text/javascript" src="js/iedxjson.js"> </script>
+
 </head>
 <body>
     <div id="header">
@@ -540,6 +540,30 @@
                         height:500,
                         imgs:['img/lunbo1.jpg','img/lunbo2.jpg','img/lunbo3.jpg','img/lunbo4.jpg']
                   })
+                  $.ajax({
+                        type:'get',
+                        url:"api/data/index.json",
+                        async:true,
+                        success:function(date){
+                            console.log(date)
+                            var $ul=$('<ul/>');
+                            $ul.addClass('clearfix');
+                            $.each(date,function(idx,item){
+                                var $p=$('<p/>').text(item.intrduct);
+                                var $h2=$('<h2/>').text(item.name);
+                                var $img=$('<img src="'+item.imgurl+'"/>');
+                                var $a=$('<a/>').append($img).append($h2).append($p);
+                                
+                                var $li=$('<li/>').append($a)
+                                    $ul.append($li);
+                            })
+                            $('.main .container').append($ul);
+
+                        }
+
+
+
+                  })
                 })
             </script>
             <div class="form">
@@ -552,6 +576,9 @@
         <div class="container"></div> 
     </div>
     <div class="main">
+        <div class="container">
+            
+        </div>
         
     </div>
 </body>

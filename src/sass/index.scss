@@ -176,3 +176,39 @@
 .lbt{
     width:100%;
 }
+.main{
+    width:100%;
+    .container{
+        padding-top:50px;
+        ul{
+
+
+            li{
+                width:600px;
+                float:left;
+
+                a{
+                    display:block;
+                    width:590px;
+                    height:448px;
+                    margin-right:10px;
+                    img{
+                    width:590px;
+                     height:300px;   
+                    }
+                    h2{
+                        font-size:26px;
+                        color:#000;
+                    }
+                }
+                a:hover{
+                    color:#F8A120;
+                    h2{
+                    color:#F8A120;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
