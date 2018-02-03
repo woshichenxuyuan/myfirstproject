@@ -73,6 +73,7 @@
 }
 
 .dl_main .container .dl_tab .dl_mima {
+  display: none;
   position: relative;
   padding-top: 32px;
 }
@@ -142,6 +143,53 @@
   margin-top: 20px;
 }
 
+.dl_main .container .dl_tab .dl_saoma {
+  height: 260px;
+  position: relative;
+}
+
+.dl_main .container .dl_tab .dl_saoma img {
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.dl_main .container .dl_tab .dl_saoma .caozuo {
+  position: absolute;
+  top: 10px;
+  left: 200px;
+  opacity: 0;
+}
+
+.dl_main .container .dl_tab .dl_saoma p {
+  position: absolute;
+  top: 234px;
+  left: 60px;
+}
+
+.dl_main .container .dl_tab .dl_foot p {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #999999;
+}
+
+.dl_main .container .dl_tab .dl_foot p span {
+  display: inline-block;
+  width: 100px;
+}
+
+.dl_main .container .dl_tab .dl_foot p img {
+  width: 20px;
+  height: 20px;
+}
+
+.dl_main .container .dl_tab .dl_foot .dl_fp a {
+  display: inline-block;
+  width: 100px;
+  color: #F19108;
+}
+
 .foot {
   width: 100%;
   height: 438px;
@@ -207,4 +255,8 @@
   width: 127px;
   height: 41px;
   background: url("../img/w1.fw.png") no-repeat;
+}
+
+.lightHeight {
+  color: #FFD58B;
 }

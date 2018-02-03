@@ -5,6 +5,8 @@
     <title>登录页面</title>
     <link rel="stylesheet" type="text/css" href="../css/base.css" />
     <link rel="stylesheet" type="text/css" href="../css/denglu.css" />
+    <script type="text/javascript" src="../lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../js/denglu.js"></script>
 </head>
 <body>
 
@@ -22,7 +24,7 @@
     <div class="container">
         <img src="../img/zhuce1.png"  />
         <div class="dl_tab">
-            <h2><span>扫码登录</span><span>密码登录</span></h2>
+            <h2><span class="saoma">扫码登录</span><span class="mima">密码登录</span></h2>
             <div class="dl_mima">
                 <input type="text" name="dl_username" id="dl_username" placeholder="用户名/手机号/邮箱"/>
                 <i class="name_n"></i>
@@ -30,6 +32,17 @@
                 <i class="name_p"></i>
                 <input type="checkbox" id="dl_check" /><label for="dl_check">记住账号</label>
                 <a href="#">立即登录</a>
+            </div>
+            <div class="dl_saoma">
+                <img src="../img/erweima.jpg" alt="" />
+                <img src="../img/ewmts.jpg" alt="" class="caozuo" />  
+                <p>打开寺库app扫一扫登录</p>
+            </div>
+            <div class="dl_foot">
+                <p>使用合作网站账号登录</p>
+                
+                <p><span><img src="../img/qq.jpg" alt="" />QQ</span><span><img src="../img/WeChat.png" alt="" />微信</span></p>
+                <p class="dl_fp">还不是寺库会员？<a href="zhuceye.html" target="_blank">免费注册</a>忘记密码？</p>
             </div>
             
         </div>
