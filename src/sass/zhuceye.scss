@@ -42,7 +42,7 @@
             float:left;
             width:382px;
             padding:30px;
-            height:615px;
+            // height:615px;
             margin-left:82px;
             input{
                 border:1px solid #DEDEDE;
@@ -67,6 +67,10 @@
             label{
                 font-size:12px;
                 letter-spacing:3px;
+                +span{
+                    font-size:12px;
+                    margin-left:130px;
+                }
             }
             input:focus{
                 border:1px solid yellow;

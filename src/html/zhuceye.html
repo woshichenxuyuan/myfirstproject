@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>登录页面</title>
+    <title>注册页面</title>
     <link rel="stylesheet" type="text/css" href="../css/base.css" />
     <link rel="stylesheet" type="text/css" href="../css/zhuceye.css" />
+    <script type="text/javascript" src="../lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../js/zhuce.js"></script>
 </head>
 <body>
     <div class="zc_hd">
@@ -21,15 +23,15 @@
         <div class="container">
             <img src="../img/zhuce1.png"  />
             <div class="zc_fm">
-                <label for="username">用户名</label><br />
+                <label for="username">用户名</label><span>请输入手机号或者邮箱</span><br />
                 <input type="text" name="username" id="username" /><br />
                 <label for="yzm">验证码</label><br />
                 <input type="text" name="yzm" id="yzm" /><span></span><br />
                 <input type="text" name="dx" id="dx" /><button class="dx_btn">获取短信验证码</button><br />
 
-                <label for="password">密码</label><br />
+                <label for="password">密码</label><span>请输入密码</span><br />
                 <input type="password" name="password" id="password" /><br />
-                <label for="qr">确认密码</label><br />
+                <label for="qr">确认密码</label><span>请再次确认密码</span><br />
                 <input type="password" name="qr" id="qr" /><br />
                 <input type="checkbox" name="yaoqingma" id="yaoqingma" />
                 <label for="yaoqingma">贵宾邀请码</label><br />
