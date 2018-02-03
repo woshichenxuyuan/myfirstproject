@@ -130,6 +130,7 @@
   z-index: 1000;
   padding: 20px;
   padding-top: 50px;
+  border-bottom: 3px solid  #F8A120;
   opacity: 1;
 }
 
@@ -187,8 +188,12 @@
   padding-top: 50px;
 }
 
+.main .container ul li:nth-child(2n-1) {
+  margin-right: 20px;
+}
+
 .main .container ul li {
-  width: 600px;
+  width: 590px;
   float: left;
 }
 
@@ -196,12 +201,21 @@
   display: block;
   width: 590px;
   height: 448px;
-  margin-right: 10px;
 }
 
-.main .container ul li a img {
+.main .container ul li a span {
+  display: block;
   width: 590px;
   height: 300px;
+  border-bottom: 5px solid #fff;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.main .container ul li a span img {
+  width: 590px;
+  height: 300px;
+  transition: all 1s;
 }
 
 .main .container ul li a h2 {
@@ -215,4 +229,101 @@
 
 .main .container ul li a:hover h2 {
   color: #F8A120;
+}
+
+.main .container ul li a:hover span {
+  border-bottom: 5px solid #F8A120;
+}
+
+.main .container ul li a:hover span img {
+  transform: scale(1.1);
+}
+
+.foot {
+  width: 100%;
+  height: 438px;
+  background: #F5F5F5;
+}
+
+.foot .container {
+  padding-top: 77px;
+  padding-bottom: 66px;
+}
+
+.foot .container .f_top ul {
+  float: left;
+  margin-right: 180px;
+}
+
+.foot .container .f_top ul li {
+  display: block;
+  height: 36px;
+}
+
+.foot .container .f_top ul li a {
+  font-size: 14px;
+  color: #000;
+}
+
+.foot .container .f_top ul li a:hover {
+  color: #F8A120;
+}
+
+.foot .container p {
+  padding-top: 40px;
+}
+
+.foot .container p span {
+  font-size: 14px;
+  margin: 0 35px 0 0;
+}
+
+.foot .container p span:nth-child(2) i {
+  display: inline-block;
+  width: 18px;
+  height: 20px;
+  background: url("../img/w1.fw.png") -163px 0 no-repeat;
+}
+
+.foot .container h6 {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.foot .container .f_b {
+  padding-top: 15px;
+}
+
+.foot .container .f_b ul li {
+  float: left;
+  width: 147px;
+}
+
+.foot .container .f_b ul li a {
+  display: block;
+  width: 127px;
+  height: 41px;
+  background: url("../img/w1.fw.png") no-repeat;
+}
+
+.go_top {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: pink;
+  border-radius: 50%;
+  font-size: 14px;
+  padding-top: 5px;
+  position: fixed;
+  top: 610px;
+  left: 1150px;
+  z-index: 1000;
+  color: #fff;
+}
+
+.xiding {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
 }

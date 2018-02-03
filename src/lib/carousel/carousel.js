@@ -86,7 +86,7 @@
                         for(var i=1;i<=len;i++){
                             var $span = $('<span/>');
                             $span.addClass('sp');
-                            $span.text(i);
+                            $span.text(i);s
                             $page.append($span);
                         }
                         $this.append($page);

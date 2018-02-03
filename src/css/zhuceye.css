@@ -1,0 +1,187 @@
+.zc_hd {
+  width: 100%;
+  background: #323131;
+}
+
+.zc_hd .container {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.zc_hd .container ul {
+  display: block;
+  width: 300px;
+  height: 70px;
+}
+
+.zc_hd .container ul li {
+  float: left;
+  width: 100px;
+}
+
+.zc_hd .container ul li a {
+  display: block;
+  height: 70px;
+  color: #999999;
+  font-size: 14px;
+  line-height: 70px;
+}
+
+.zc_hd .container ul li a:hover {
+  color: #EA721E;
+}
+
+.zc_main {
+  width: 100%;
+  height: 780px;
+  background: #FDF8F4;
+}
+
+.zc_main .container {
+  padding-top: 50px;
+}
+
+.zc_main .container img {
+  margin-left: 50px;
+  transform: scale(0.9);
+  float: left;
+}
+
+.zc_main .container .zc_fm {
+  background: #fff;
+  float: left;
+  width: 382px;
+  padding: 30px;
+  height: 615px;
+  margin-left: 82px;
+}
+
+.zc_main .container .zc_fm input {
+  border: 1px solid #DEDEDE;
+  width: 310px;
+  height: 43px;
+  margin: 12px 0 12px 0;
+}
+
+.zc_main .container .zc_fm #yzm {
+  width: 128px;
+}
+
+.zc_main .container .zc_fm #dx {
+  width: 128px;
+}
+
+.zc_main .container .zc_fm #yaoqingma {
+  width: 15px;
+  height: 15px;
+}
+
+.zc_main .container .zc_fm #agree {
+  width: 15px;
+  height: 15px;
+}
+
+.zc_main .container .zc_fm label {
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.zc_main .container .zc_fm input:focus {
+  border: 1px solid yellow;
+}
+
+.zc_main .container .zc_fm .dx_btn {
+  width: 108px;
+  height: 20px;
+  margin-left: 10px;
+  background: #FAFAFA;
+  border: 1px solid #DEDEDE;
+}
+
+.zc_main .container .zc_fm .zc_btn {
+  width: 310px;
+  height: 52px;
+  border: 1px solid #DEDEDE;
+  background: #F19108;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+.zc_main .container .zc_fm p {
+  font-size: 14px;
+  color: #999999;
+}
+
+.zc_main .container .zc_fm p a {
+  color: #F19108;
+  font-size: 14px;
+}
+
+.foot {
+  width: 100%;
+  height: 438px;
+  background: #F5F5F5;
+}
+
+.foot .container {
+  padding-top: 77px;
+  padding-bottom: 66px;
+}
+
+.foot .container .f_top ul {
+  float: left;
+  margin-right: 180px;
+}
+
+.foot .container .f_top ul li {
+  display: block;
+  height: 36px;
+}
+
+.foot .container .f_top ul li a {
+  font-size: 14px;
+  color: #000;
+}
+
+.foot .container .f_top ul li a:hover {
+  color: #F8A120;
+}
+
+.foot .container p {
+  padding-top: 40px;
+}
+
+.foot .container p span {
+  font-size: 14px;
+  margin: 0 35px 0 0;
+}
+
+.foot .container p span:nth-child(2) i {
+  display: inline-block;
+  width: 18px;
+  height: 20px;
+  background: url("../img/w1.fw.png") -163px 0 no-repeat;
+}
+
+.foot .container h6 {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.foot .container .f_b {
+  padding-top: 15px;
+}
+
+.foot .container .f_b ul li {
+  float: left;
+  width: 147px;
+}
+
+.foot .container .f_b ul li a {
+  display: block;
+  width: 127px;
+  height: 41px;
+  background: url("../img/w1.fw.png") no-repeat;
+}
