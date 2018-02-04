@@ -42,5 +42,48 @@ jQuery(function($){
             opacity:0
         },1000);
 
+    });
+
+    var $span=$('.dl_mima').children().eq(0);
+    console.log($span);
+    var a=0;
+    var b=0;
+
+    $('.dl_mima a').on('click',function(){
+        var $nameVal=$('#dl_username').val();
+        $nameVal=$nameVal.replace(/^\s{1,}|\s{1,}$/g,'');
+        var $pdVal=$('#dl_password').val();
+        $pdVal=$pdVal.replace(/^\s{1,}|\s{1,}$/g,'');
+        $.ajax({
+            type:'get',
+            url:'../api/data/user.json',
+            success:function(res){
+                $.each(res,function(idx,item){
+                    if($nameVal==item['id']){
+                        a++;
+                        if($pdVal==item['password']){
+                            b++;
+                        }
+                    }
+                });
+                if(a==0){
+                    $span.text('该账号未注册').css({
+                        color:'red'
+                    })
+                }
+                if(b==0){
+                    $('.dl_pd').text('密码输入有误').css({
+                        color:'red'
+                    });
+                }
+                    console.log($(this))
+                if(a!=0&&b!=0){
+                    window.location.href='../index.html';
+                }
+
+            }
+        });
     })
+
+
 });

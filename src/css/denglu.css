@@ -82,7 +82,6 @@
   border: 1px solid #ccc;
   width: 310px;
   height: 42px;
-  margin-top: 15px;
 }
 
 .dl_main .container .dl_tab .dl_mima i {
@@ -94,14 +93,14 @@
 .dl_main .container .dl_tab .dl_mima .name_n {
   background: url("../img/zitubiao1.png");
   position: absolute;
-  top: 58px;
+  top: 66px;
   left: 268px;
 }
 
 .dl_main .container .dl_tab .dl_mima .name_p {
   background: url("../img/zitubiao2.png");
   position: absolute;
-  top: 114px;
+  top: 128px;
   left: 268px;
 }
 
@@ -121,6 +120,7 @@
   display: block;
   width: 12px;
   height: 12px;
+  margin-top: 2px;
 }
 
 .dl_main .container .dl_tab .dl_mima label {
