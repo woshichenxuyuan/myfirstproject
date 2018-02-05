@@ -37,7 +37,7 @@ require(['config'],function(){
                     var $a=$('<a href="../details.html"></a>')
                     var $img=$('<img src="'+item.imgurl+'"/>');
                     var $p=$('<p>'+item.name+item.id+'</p>');
-                    var $span=$('<span >'+item.price+'</span>');
+                    var $span=$('<span >'+item.price+'￥</span>');
                     $a.append($img).append($p).append($span);
                     $li.append($a);
                     $ul.append($li);
@@ -58,13 +58,17 @@ require(['config'],function(){
 
 
                    })
-                   $page.append($span); 
+                   $page.append($span);
+                   $page.children().eq(0).addClass('changeActive'); 
                 }
             }
         });
+            $page.children().eq(0).addClass('changeActive');
         
         $page.on('click','span',function(){
             var pageNo=$(this).text();
+            $(this).siblings().removeClass('changeActive');
+            $(this).addClass('changeActive');
             $.ajax({
                 type:'post',
                 url:'../api/goodslisit.php',
@@ -82,7 +86,7 @@ require(['config'],function(){
                         var $a=$('<a href="../details.html"></a>')
                         var $img=$('<img src="'+item.imgurl+'"/>');
                         var $p=$('<p>'+item.name+item.id+'</p>');
-                        var $span=$('<span >'+item.price+'</span>');
+                        var $span=$('<span >'+item.price+'￥</span>');
                         $a.append($img).append($p).append($span);
                         $li.append($a);
                         $ul.append($li);
@@ -91,10 +95,11 @@ require(['config'],function(){
                     console.log($ul_1);
                     $ul_1.remove();
                     $('.list').append($ul);
+
                     
                 }
 
             })
-        })
+        });
     })
 })
