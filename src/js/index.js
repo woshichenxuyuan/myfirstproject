@@ -1,42 +1,53 @@
 jQuery(function($){
+        
+    var str=location.search;
+    str=decodeURI(str);
+    console.log(str);
+    if(str!=''){
+        var res=str.slice(1).split('=');
+        $('.hd_dl').text('欢迎'+res).css({
+            color:'orange'
+        });
+          
+        }
     $('.li_1').on('mouseenter',function(){
         $(this).children().eq(1).stop().show().stop().animate({
                 top:46,
                  opacity:0.7,
                 },1000);
-        })
-         $('.li_1').on('mouseleave',function(){
+    })
+    $('.li_1').on('mouseleave',function(){
             $(this).children().eq(1).stop().hide().stop().animate({
                             top:146,
                             opacity:1,
                     },1000);
-                });
-            $('.lbt .container').carousel({
-                width:1200,
-                height:500,
-                imgs:['img/lunbo1.jpg','img/lunbo2.jpg','img/lunbo3.jpg','img/lunbo4.jpg']
-            })
-            $.ajax({
-                type:'get',
-                url:"api/data/index.json",
-                async:true,
-                success:function(date){
-                    var $ul=$('<ul/>');
-                    $ul.addClass('clearfix');
-                    $.each(date,function(idx,item){
-                        var $p=$('<p/>').text(item.intrduct);
-                        var $h2=$('<h2/>').text(item.name);
-                        var $img=$('<img src="'+item.imgurl+'"/>');
-                        var $span=$('<span/>')
-                        $span.append($img);
-                        var $a=$('<a/>').append($span).append($h2).append($p);
+    });
+    $('.lbt .container').carousel({
+        width:1200,
+        height:500,
+        imgs:['img/lunbo1.jpg','img/lunbo2.jpg','img/lunbo3.jpg','img/lunbo4.jpg']
+    })
+    $.ajax({
+        type:'get',
+        url:"api/data/index.json",
+        async:true,
+        success:function(date){
+            var $ul=$('<ul/>');
+            $ul.addClass('clearfix');
+            $.each(date,function(idx,item){
+                var $p=$('<p/>').text(item.intrduct);
+                var $h2=$('<h2/>').text(item.name);
+                var $img=$('<img src="'+item.imgurl+'"/>');
+                var $span=$('<span/>')
+                $span.append($img);
+                var $a=$('<a/>').append($span).append($h2).append($p);
 
-                        var $li=$('<li/>').append($a)
-                        $ul.append($li);
+                var $li=$('<li/>').append($a)
+                $ul.append($li);
                             })
-                        $('.main .container').append($ul);
+                $('.main .container').append($ul);
 
-                    }
+            }
 
                   });
             $('.go_top').hide();
@@ -61,4 +72,5 @@ jQuery(function($){
                     scrollTop:0
                 },1000);
             })
+  
 })

@@ -78,12 +78,38 @@ jQuery(function($){
                 }
                     console.log($(this))
                 if(a!=0&&b!=0){
-                    window.location.href='../index.html';
+                   
+                    var $check=$('#dl_check');
+                    console.log($check[0].checked);
+                    if($check[0].checked==true){
+                     
+                        // console.log(name);
+                        var now=new Date();
+                        now.setDate(now.getDate()+7);
+                        document.cookie='name='+$nameVal+';expires'+now.toUTCString();
+                        document.cookie='password='+$pdVal;
+                        
+                    }
+                     window.location.href='../index.html?id='+$nameVal;
                 }
 
             }
         });
     })
 
+    var str=document.cookie;
+    str=str.split('; ');
+    console.log(str);
+    str.forEach(function(item){
+        var arr=item.split('=');
+        console.log(arr);
+        if(arr[0]=='name'){
+
+        
+            window.location.href='../index.html?id='+arr[1];
+            
+        }   
+
+    })
 
 });
