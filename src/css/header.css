@@ -1,0 +1,175 @@
+#header {
+  width: 100%;
+}
+
+#header .container {
+  padding: 32px 32px 0 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#header .container .hd_l {
+  width: 300px;
+  height: 108px;
+}
+
+#header .container .hd_l img {
+  float: left;
+}
+
+#header .container .hd_l .span_t {
+  font-size: 18px;
+}
+
+#header .container .hd_l .span_b {
+  font-size: 14px;
+}
+
+#header .container .hd_r {
+  position: relative;
+}
+
+#header .container .hd_r ul {
+  width: 350px;
+}
+
+#header .container .hd_r ul li {
+  position: relative;
+  float: left;
+  margin: 10px;
+}
+
+#header .container .hd_r ul li a {
+  font-size: 12px;
+  color: #000;
+}
+
+#header .container .hd_r ul li a:hover {
+  color: orange;
+}
+
+#header .container .hd_r ul li:nth-child(3) a i {
+  display: block;
+  width: 8px;
+  height: 9px;
+  background: url("../img/w1.fw.png") 0 0 no-repeat;
+  position: absolute;
+  top: 8px;
+  left: 50px;
+}
+
+#header .container .hd_r ul li:nth-child(3) a:hover div {
+  display: block;
+}
+
+#header .container .hd_r ul li:nth-child(3) a:hover i {
+  transform: rotate(180deg);
+  transition: all 1s;
+}
+#header .container .hd_r ul li:nth-child(3) div {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  width: 200px;
+  border: 1px solid orange;
+  background-color: #fff;
+  z-index: 100;
+}
+
+#header .container .hd_r ul li:nth-child(3) div p:nth-child(4) {
+  color: #C5C4BF;
+}
+
+#header .container .hd_r .car {
+  position: absolute;
+  top: 60px;
+  left: 174px;
+}
+.nav {
+  position: relative;
+  width: 100%;
+  height: 46px;
+  background: #000;
+}
+
+.nav ul {
+  display: flex;
+  width: 800px;
+}
+
+.nav ul li {
+  display: block;
+  height: 46px;
+  width: 10%;
+}
+
+.nav ul li a {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  height: 46px;
+  width: 100%;
+  text-align: center;
+  line-height: 46px;
+}
+
+.nav ul li a:hover {
+  color: #EA721E;
+}
+
+.nav ul li div {
+  background: #fff;
+  display: none;
+  position: absolute;
+  top: 146px;
+  left: 0px;
+  width: 1263px;
+  z-index: 1000;
+  padding: 20px;
+  padding-top: 50px;
+  border-bottom: 3px solid  #F8A120;
+  opacity: 1;
+}
+
+.nav ul li div ul {
+  width: 400px;
+  display: flex;
+  flex-flow: wrap;
+  float: left;
+}
+
+.nav ul li div ul li {
+  display: block;
+  height: 30px;
+  width: 50%;
+}
+
+.nav ul li div ul li a {
+  display: block;
+  width: 30px;
+  width: 100px;
+  text-align: left;
+  color: #000;
+}
+
+.nav .form {
+  position: absolute;
+  top: 3px;
+  left: 990px;
+}
+
+.nav .form input {
+  width: 225px;
+  height: 40px;
+}
+
+.nav .form i {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("../img/w1.fw.png") -117px 0px no-repeat;
+  position: absolute;
+  top: 13px;
+  left: 200px;
+}

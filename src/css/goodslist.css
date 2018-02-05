@@ -1,0 +1,26 @@
+main {
+  width: 100%;
+}
+
+main .container .list {
+  width: 100%;
+}
+
+main .container .list ul {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+  width: 100%;
+  padding-top: 50px;
+}
+
+main .container .list ul li a {
+  display: block;
+  width: 270px;
+  height: 370px;
+  padding-left: 35px;
+}
+
+main .container .list ul li a p {
+  font-size: 14px;
+}
