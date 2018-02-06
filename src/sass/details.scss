@@ -248,7 +248,7 @@ main{
 
                         }
                         span{
-                            color:pink;
+                            color:#666;
 
                         }      
                     }
@@ -306,10 +306,35 @@ main{
                     border:none;
                 }
             }
+            p{
+                display:block;
+                // height:300px;
+                padding:30px 0 30px 0;
+                background:#EDEDED;
+                span{
+                    display:inline-block;
+                    height:50px;
+                    line-height:30px;
+                    padding:10px;
+                    margin:0 10px 0 10px;
+                    font-size:14px;
+                    border:1px solid #ededed;
+                }
+                span:hover{
+                    background:#fff;
+                    border:1px solid #ccc;
+                    transition:all 0.6s;
+                }
+            }
+
             .tab_{
                 .sp_xq{
-                    height:200px;
-                    padding:70px;
+                    background:#fff;
+                    // height:200px;
+                    padding:50px 0 0 20px;
+                    img{
+                        margin-top:20px;
+                    }
                 }
             }
 
