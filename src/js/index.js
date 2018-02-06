@@ -48,7 +48,7 @@ require(['config'],function(){
                         var $img=$('<img src="'+item.imgurl+'"/>');
                         var $span=$('<span/>')
                         $span.append($img);
-                        var $a=$('<a/>').append($span).append($h2).append($p);
+                        var $a=$('<a href="html/goodslist.html"></a>').append($span).append($h2).append($p);
 
                         var $li=$('<li/>').append($a)
                         $ul.append($li);

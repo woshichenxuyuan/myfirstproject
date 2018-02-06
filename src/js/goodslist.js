@@ -34,7 +34,7 @@ require(['config'],function(){
                 $ul.addClass('clearfix');
                 $.each(res.data,function(idx,item){
                     var $li=$('<li/>').attr('data-id',item.id);
-                    var $a=$('<a href="../details.html"></a>')
+                    var $a=$('<a href="details.html?id='+item.id+'"></a>')
                     var $img=$('<img src="'+item.imgurl+'"/>');
                     var $p=$('<p>'+item.name+item.id+'</p>');
                     var $span=$('<span >'+item.price+'￥</span>');
@@ -78,12 +78,11 @@ require(['config'],function(){
                 },
                 success:function(res){
                     var res=JSON.parse(res);
-                // console.log(res);
                     var $ul=$('<ul/>');
                     $ul.addClass('clearfix');
                     $.each(res.data,function(idx,item){
                         var $li=$('<li/>').attr('data-id',item.id);
-                        var $a=$('<a href="../details.html"></a>')
+                        var $a=$('<a href="details.html?id='+item.id+'"></a>')
                         var $img=$('<img src="'+item.imgurl+'"/>');
                         var $p=$('<p>'+item.name+item.id+'</p>');
                         var $span=$('<span >'+item.price+'￥</span>');
@@ -95,11 +94,17 @@ require(['config'],function(){
                     console.log($ul_1);
                     $ul_1.remove();
                     $('.list').append($ul);
+                    //排序
+                    //大-》小
+                    
 
                     
+               
+                
                 }
+
 
             })
         });
     })
-})
+});
