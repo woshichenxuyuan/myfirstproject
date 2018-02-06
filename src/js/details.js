@@ -32,20 +32,46 @@ require(['config'],function(){
                     console.log(item.id==id)
                     if(item.id==id){
                         for(var i=0;i<4;i++){
-                            var $img=$('<img src="'+item['imgurl']+'"/>').css({
-                                width:'30px',
-                                height:'30px'
-                            });
-                            $('.dt_bl_1l').append($img);
-
+                            var $img=$('<img src="'+item['imgurl']+'"/>');
+                            
+                         
+                            $('.dt_bl_l').append($img);
                         }
                         var $img_1=$('<img src="'+item['imgurl']+'"/>');
 
                         console.log($img)
                         $dt_bl.append($img_1);
-
+                        var $p=$('<p>'+item.name+item.id+'</p>')
+                        $('.dt_brt').append($p);
+                        var $span=$('<span/>').text('￥'+item.price);
+                        var $p_1=$('.dl_brz').children();
+                        $p_1.eq(0).append($span)
+                        var $span_1=$('<span/>').text()
+                        $ul=$('<ul/>');
+                        $ul.addClass('clearfix');
+                        var $li=$("<li/>");
+                        var $i=$('<i/>');
+                        var $img_2=$('<img src="'+item['imgurl']+'"/>');
+                        var $span=$('<span>'+item.name+'<br>'+'￥'+item.price+'<span/>');
+                        $i.append($img_2);
+                        $li.append($i).append($span)
+                        $ul.append($li);
+                         $('.zuijin').append($ul);
                     }
-                })
+                });
+                    $ul=$('<ul/>');
+                    $ul.addClass('clearfix');
+                for(var i=0;i<6;i++){
+                    
+                        var $li=$("<li/>");
+                        var $i=$('<i/>');
+                        var $img_2=$('<img src="'+res[i]['imgurl']+'"/>');
+                        var $span=$('<span>'+res[i].name+'<br>'+'￥'+res[i].price+'<span/>');
+                        $i.append($img_2);
+                        $li.append($i).append($span)
+                        $ul.append($li);
+                }
+                $('.left_top_1').append($ul);
 
             }
         })

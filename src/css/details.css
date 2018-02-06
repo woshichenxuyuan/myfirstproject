@@ -34,3 +34,306 @@ main .container .dt_top p .sp_1 {
   display: inline-block;
   margin-left: 430px;
 }
+
+main .container .dt_b {
+  position: relative;
+  background: #fff;
+  padding: 50px;
+}
+
+main .container .dt_b img {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #ccc;
+}
+
+main .container .dt_b .dt_bl {
+  float: left;
+}
+
+main .container .dt_b .dt_bl .dt_bl_l {
+  float: left;
+  border: 2px solid #ccc;
+  margin-right: 30px;
+  padding: 0 5px 5px 5px;
+}
+
+main .container .dt_b .dt_bl .dt_bl_l img {
+  display: block;
+  width: 93px;
+  height: 93px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+main .container .dt_b .dt_br {
+  float: left;
+  margin-left: 20px;
+}
+
+main .container .dt_b .dt_br .dt_brt {
+  border-bottom: 2px  dotted #ccc;
+  height: 70px;
+  padding-top: 10px;
+}
+
+main .container .dt_b .dt_br .dt_brt p {
+  font-size: 14px;
+}
+
+main .container .dt_b .dt_br .dl_brz {
+  border-bottom: 2px  dotted #ccc;
+  padding-top: 10px;
+}
+
+main .container .dt_b .dt_br .dl_brz p:nth-child(1) {
+  display: block;
+}
+
+main .container .dt_b .dt_br .dl_brz p:nth-child(1) span {
+  font-size: 30px;
+  color: red;
+  margin: 50px;
+}
+
+main .container .dt_b .dt_br .dl_brz p:nth-child(2) {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #999999;
+}
+
+main .container .dt_b .dt_br .dl_brz p:nth-child(2) span:nth-child(1) {
+  margin: 0 10px 0 74px;
+}
+
+main .container .dt_b .dt_br .dl_brz p:nth-child(3) {
+  display: block;
+  height: 40px;
+  font-size: 14px;
+  color: #999;
+}
+
+main .container .dt_b .dt_br .dl_brz p:nth-child(3) span {
+  margin-left: 64px;
+}
+
+main .container .dt_b .dl_brb {
+  padding-top: 30px;
+}
+
+main .container .dt_b .dl_brb p {
+  display: block;
+  font-size: 14px;
+  color: #999;
+}
+
+main .container .dt_b .dl_brb p img {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+
+main .container .dt_b .dl_brb .buy_n {
+  margin-top: 20px;
+}
+
+main .container .dt_b .dl_brb .buy_n span {
+  float: left;
+  margin-right: 30px;
+}
+
+main .container .dt_b .dl_brb .buy_n button {
+  width: 14px;
+  height: 17px;
+  font-size: 14px;
+  font-weight: 1000;
+  line-height: 17px;
+  float: left;
+}
+
+main .container .dt_b .dl_brb .buy_n input {
+  float: left;
+  width: 60px;
+  border: 1px solid #ccc;
+}
+
+main .container .dt_b .dl_brb div {
+  margin-top: 30px;
+}
+
+main .container .dt_b .dl_brb div button {
+  width: 170px;
+  height: 40px;
+  margin-right: 30px;
+  color: #fff;
+}
+
+main .container .dt_b .dl_brb div button:nth-child(1) {
+  background: #E93A38;
+}
+
+main .container .dt_b .dtbottom {
+  position: absolute;
+  top: 454px;
+}
+
+main .container .dt_b .dtbottom span {
+  display: inline-block;
+  width: 100px;
+  position: relative;
+  font-size: 14px;
+  color: #999;
+  padding-top: 5px;
+}
+
+main .container .dt_b .dtbottom span i {
+  display: inline-block;
+  width: 25px;
+  height: 19px;
+  background: url("../img/w1.fw.png") no-repeat;
+}
+
+main .container .guess {
+  margin-top: 50px;
+  background: #fff;
+  padding: 20px;
+}
+
+main .container .guess h4 {
+  font-size: 14px;
+  color: skyblue;
+}
+
+main .container .guess ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .container .guess ul li {
+  display: block;
+  width: 15%;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+main .container .guess ul li img {
+  margin-left: 15px;
+}
+
+main .container .guess ul li p {
+  font-size: 12px;
+}
+
+main .container .guess ul li span {
+  font-size: 14px;
+  color: red;
+}
+
+main .container .guess ul li:hover {
+  background: skyblue;
+  transition: all 1s;
+}
+
+main .container .dtleft {
+  float: left;
+  margin-top: 30px;
+  width: 210px;
+}
+
+main .container .dtleft .left {
+  margin-top: 20px;
+}
+
+main .container .dtleft .left h3 {
+  display: block;
+  width: 210px;
+  background: #000;
+  color: #fff;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+main .container .dtleft .left ul {
+  background: #fff;
+}
+
+main .container .dtleft .left ul li {
+  border: 1px solid #ccc;
+}
+
+main .container .dtleft .left ul li i {
+  float: left;
+  display: block;
+  width: 80px;
+  overflow: hidden;
+  height: 80px;
+}
+
+main .container .dtleft .left ul li i img {
+  transition: all 0.8s;
+}
+
+main .container .dtleft .left ul li span {
+  color: pink;
+}
+
+main .container .dtleft .left ul li:hover img {
+  transform: scale(1.2);
+  transition: all 0.8s;
+}
+
+main .container .dtleft .left_top_1 img {
+  width: 80px;
+  height: 80px;
+  transition: all 0.8s;
+}
+
+main .container .dtleft .left_top_1 span {
+  font-size: 12px;
+}
+
+main .container .dtleft .zuijin img {
+  width: 80px;
+  height: 80px;
+  transition: all 0.8s;
+}
+
+main .container .dtleft .zuijin span {
+  font-size: 12px;
+}
+
+main .container .dtright {
+  float: left;
+  margin-top: 50px;
+  margin-left: 30px;
+  background: #fff;
+  width: 960px;
+}
+
+main .container .dtright ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+main .container .dtright ul li {
+  width: 25%;
+  border-right: 2px solid #fff;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  background: #333;
+}
+
+main .container .dtright ul li:last-child {
+  border: none;
+}
+
+main .container .dtright .tab_ .sp_xq {
+  height: 200px;
+  padding: 70px;
+}
