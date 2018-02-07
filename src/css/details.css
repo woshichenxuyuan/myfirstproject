@@ -41,7 +41,7 @@ main .container .dt_b {
   padding: 50px;
 }
 
-main .container .dt_b img {
+main .container .dt_b .gds_1 {
   width: 400px;
   height: 400px;
   border: 1px solid #ccc;
@@ -168,9 +168,6 @@ main .container .dt_b .dl_brb div button {
   height: 40px;
   margin-right: 30px;
   color: #fff;
-}
-
-main .container .dt_b .dl_brb div button:nth-child(1) {
   background: #E93A38;
 }
 

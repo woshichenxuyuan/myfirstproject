@@ -1,5 +1,5 @@
 require(['config'],function(){
-    require(['jquery'],function($){
+    require(['jquery','gdsZoom'],function($){
         $('header').load('../html/header',function(){
             //免登陆
             var str=document.cookie;
@@ -49,16 +49,26 @@ require(['config'],function(){
                 $.each(res,function(idx,item){
                     console.log(item.id==id)
                     if(item.id==id){
+                        $('.color_')[0].src=item['imgurl'];
+                        $('.color_').css({
+                            width:'50px',
+                            height:'50px',
+                            border:'2px solid blue'
+                        })
                         for(var i=0;i<4;i++){
-                            var $img=$('<img src="'+item['imgurl']+'"/>');
-                            
+                            var $img=$('<img src="../img/g'+(i+5)+'.jpg"/>');
+                            if(i==0){
+                                $img=$('<img src="'+item['imgurl']+'"/>');
+                            }
                          
                             $('.dt_bl_l').append($img);
                         }
-                        var $img_1=$('<img src="'+item['imgurl']+'"/>');
-
+                        var $img_1=$('<img src="'+item['imgurl']+'" class="gds_1"/>');
+                        $div=$('<div/>').addClass('gds').append($img_1).css({
+                            float:'left',
+                        })
                         console.log($img)
-                        $dt_bl.append($img_1);
+                        $dt_bl.append($div);
                         var $p=$('<p>'+item.name+item.id+'</p>')
                         $('.dt_brt').append($p);
                         var $span=$('<span/>').text('￥'+item.price);
@@ -90,9 +100,31 @@ require(['config'],function(){
                         $ul.append($li);
                 }
                 $('.left_top_1').append($ul);
+                console.log($('.gds'))
+               $('.gds').zoom({
+                    position:'right',
+                    // width:500,
+                    // height:500
+                });
+               $('.dt_bl_l').on('click','img',function(){
+                console.log($(this)[0])
+                    $('.gds_1')[0].src=$(this)[0].src;
+                    $(this).siblings().css({
+                        border:'1px solid #ccc'
+                    })
+                    $(this).css({
+                        border:'1px solid orange'
+                    });
+                     $('.color_')[0].src=$(this)[0].src;
+                        $('.color_').css({
+                            width:'50px',
+                            height:'50px',
+                            border:'2px solid blue'
+                        })
 
+               })
             }
-        })
+        });
         $('footer').load('../html/footer');
     });
 })
