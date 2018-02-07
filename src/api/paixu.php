@@ -1,14 +1,23 @@
 <?php
     require('connect.php');
-    $itemqty=isset($_POST['itemqty']) ? $_POST['itemqty'] :20;
-    $pageNo=isset($_POST['pageNo']) ? $_POST['pageNo'] :1;
-
+    $itemqty=isset($_GET['itemqty']) ? $_GET['itemqty'] :20;
+    $pageNo=isset($_GET['pageNo']) ? $_GET['pageNo'] :1;
+    
+    $paixu=isset($_GET['paixu']) ? $_GET['paixu'] :'';
     $sql="select * from goodslist ";
+    if($paixu){
+        if($paixu=='降序'){
 
+            $sql.="order by price*1";
+        }else{
+            $sql.="order by price*1 desc";
+
+        }
+    }
     $str=$conn->query($sql);
     // var_dump ($str);
     $content=$str->fetch_all(MYSQLI_ASSOC);
-    
+    // var_dump($sql);
 
 
 

@@ -1,6 +1,23 @@
 require(['config'],function(){
     require(['jquery'],function($){
         $('header').load('../html/header',function(){
+            //免登陆
+            var str=document.cookie;
+            if(str!='[]'){
+                str=str.split('; ');
+                console.log(str);
+                str.forEach(function(item){
+                    var arr=item.split('=');
+                    console.log(arr);
+                    if(arr[0]=='name'){
+                        $('.hd_dl').text('欢迎您！'+arr[1]).css({
+                                color:'orange'
+                            });
+    
+                }   
+            })
+
+            }
 
             $('.li_1').on('mouseenter',function(){
                 $(this).children().eq(1).stop().show().stop().animate({
@@ -25,9 +42,10 @@ require(['config'],function(){
         var $dt_br=$('.dt_br');
         $.ajax({
             type:'get',
-            url:'../api/data/goodslist.json',
+            url:'../api/details.php',
+            dataType:'json',
             success:function(res){
-                // console.log('WAT2112.BA0950'=='WAT2112.BA0951');
+                console.log(res);
                 $.each(res,function(idx,item){
                     console.log(item.id==id)
                     if(item.id==id){

@@ -2,6 +2,15 @@ main {
   width: 100%;
 }
 
+main .container .fx p {
+  display: inline-block;
+}
+
+main .container .fx button {
+  width: 50px;
+  height: 30px;
+}
+
 main .container .list {
   width: 100%;
 }

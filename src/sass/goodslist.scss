@@ -1,6 +1,16 @@
 main{
     width:100%;
     .container{
+        .fx{
+            p{
+                display:inline-block;
+            }
+            button{
+                width:50px;
+                height:30px;
+                // background:#ededed;
+            }
+        }
         .list{
             width:100%;
             ul{

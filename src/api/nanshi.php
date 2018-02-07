@@ -1,14 +1,18 @@
 <?php
     require('connect.php');
-    $itemqty=isset($_POST['itemqty']) ? $_POST['itemqty'] :20;
-    $pageNo=isset($_POST['pageNo']) ? $_POST['pageNo'] :1;
+    $itemqty=isset($_GET['itemqty']) ? $_GET['itemqty'] :20;
+    $pageNo=isset($_GET['pageNo']) ? $_GET['pageNo'] :1;
+    $style=isset($_GET['styles']) ? $_GET['styles'] :'';
 
     $sql="select * from goodslist ";
+    if($style){
+        $sql.="where styles='$style'";
+    }
 
     $str=$conn->query($sql);
     // var_dump ($str);
     $content=$str->fetch_all(MYSQLI_ASSOC);
-    
+    // var_dump($sql);
 
 
 

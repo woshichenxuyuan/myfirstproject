@@ -38,22 +38,21 @@ require(['config'],function(){
                    });
                    
                 }
-                $.ajax({
-                    type:'get',
-                    url:'../api/data/user.json',
-                    success:function(res){
-                        $.each(res,function(idx,item){
-                            console.log(item)
-                           for( var attr in item){
-                                if($nameVal==item[attr]){
-                                    $label.eq(0).next().text('该用户已注册').css({
-                                                color:'red'
-                                            });
-                                }
-                           }
-                        })
-                    }
-                })
+                // $.ajax({
+                //     type:'get',
+                //     url:'../api/zhuce.php',
+                //     success:function(res){
+                //             console.log(res)
+                           
+                //                 if(res=='fail'){
+                //                     $label.eq(0).next().text('该用户已注册').css({
+                //                                 color:'red'
+                //                             });
+                //                 }
+                           
+                        
+                //     }
+                // })
             })
              var $yzmVal=scode();
                 console.log($yzmVal);
@@ -160,10 +159,20 @@ require(['config'],function(){
                 var password=$password.val();
                 $.ajax({
                     type:'get',
-                    url:'../api/user.php',
+                    url:'../api/zhuce.php',
                     data:{id:id,password:password},
                     success:function(res){
-                        window.location.href='../html/dengluye.html';
+                        console.log(res)
+                        if(res=='fail'){
+                           $('.userspan').text('该用户已存在').css(
+                            {color:'red'});
+                            $('#username').css({
+                                border:'1px solid red' 
+                            }); 
+                        }
+                        else if(res=='success'){
+                            window.location.href='dengluye.html'
+                        }
 
                         
                     }
