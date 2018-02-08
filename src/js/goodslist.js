@@ -19,6 +19,7 @@ require(['config'],function(){
 
             }
 
+
             $('.li_1').on('mouseenter',function(){
                 $(this).children().eq(1).stop().show().stop().animate({
                         top:46,
@@ -31,6 +32,49 @@ require(['config'],function(){
                         opacity:1,
                     },1000);
             });
+            function xie(){
+                var cookies =document.cookie;
+                cookies=cookies.split('; ');
+                cookies.forEach(function(item){
+                    var arr_c=item.split('=');
+                    console.log(arr_c[0])
+                    if(arr_c[0]=='goods'){
+
+                        var res=JSON.parse(arr_c[1])
+                        res.forEach(function(item){
+                            var $li=$('<li/>').addClass(item.id);
+                            var $img=$('<img src="'+item['src']+'"/>');
+                            var $p=$('<p>'+item.gname+'<br>'+'单价：'+item.price+'<br>'+'数量：'+item.num+'<br>'+'发货站：'+item.place+'</p>');
+                            // var $cspan=$('<span/>').text(item.gname);
+                            // var $span_1=$('<span/>').text(item.price);
+                            $li.append($img).append($p);
+                            $('.carList').append($li);
+                        });
+                        $('.car_son').text(res.length);
+                        // console.log(res.length)
+
+                    }
+                });
+
+                    $('.car_son').css({
+                        color:'orange'
+                    })
+               $('.car_fat').on('mouseenter',function(){
+                    $('.carList').show();
+                    $(this).css({
+                        color:'orange'
+
+                    })
+               });
+                $('.car_fat').on('mouseleave',function(){
+                    $('.carList').hide();
+                     $(this).css({
+                        color:'#000'
+                        
+                    })
+               })  
+        }
+        xie();
         });
         $('footer').load('../html/footer');
         //初始化

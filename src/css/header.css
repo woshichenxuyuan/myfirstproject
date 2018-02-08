@@ -86,6 +86,31 @@
   top: 60px;
   left: 174px;
 }
+#header .container .hd_r .car span .carList{
+  position:absolute;
+  top:20px;
+  left:-64px;
+  /*height:10px;*/
+  width:200px;
+  background:#ededed;
+  z-index:1000;
+  border:2px solid orange;
+  display:none;
+}
+#header .container .hd_r .car span .carList li{
+  background:#fff;
+  padding:10px;
+  border-bottom:3px  dotted #ccc;
+}
+.carList img{
+  width:100px;
+  height:100px;
+  margin-left:30px;
+
+}
+.carList p{
+  font-size:12px;
+}
 .nav {
   position: relative;
   width: 100%;
