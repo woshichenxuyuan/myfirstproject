@@ -1,0 +1,28 @@
+{
+  "name": "范方政",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "browser-sync": "^2.23.6",
+    "gulp-sass": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woshichenxuyuan/myfirstproject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woshichenxuyuan/myfirstproject/issues"
+  },
+  "homepage": "https://github.com/woshichenxuyuan/myfirstproject#readme"
+}
