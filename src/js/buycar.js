@@ -76,6 +76,7 @@ require(['config'],function(){
             xie();
         });
         $('footer').load('../html/footer');
+        //获取cookies写入购物车
        (function(){
             var cookies=document.cookie;
 
@@ -106,7 +107,9 @@ require(['config'],function(){
                         var $span3=$('<span/>').addClass('del');
                         var $btn1=$('<button/>').text('-').addClass('jian');
                         var $btn2=$('<button/>').text('+').addClass('jia');
-                        var $input1=$('<input type="text"/>').addClass('qty').val(item.num);
+                        var $input1=$('<input type="number"/>').addClass('qty').val(item.num).attr('disabled','disabled').css({
+                            background:'#fff'
+                        });
                         $span3.append($btn1,$input1,$btn2).addClass('clearfix');
                         $span3.children().css({
                             float:'left'
@@ -127,7 +130,12 @@ require(['config'],function(){
                         $('.goodsLists').append($li);
 
                     });
+                    //加数量
                     $('.jia').on('click',function(){
+             
+                           
+                        
+                        //小计
                         var num=$(this).siblings().eq(1).val();
                         console.log($(this).siblings().eq(1));
                        // =$('.qty').val();
@@ -139,6 +147,33 @@ require(['config'],function(){
                         var total=price*num;
                         console.log(total);
                         $(this).parent().next().text('￥'+total)
+                        //结算
+                        var $check=$('.checkbtn');
+                           
+                        var price=0;
+                        // var $thisParent=$(this).parent().parent();
+                        // var $thisItem=$thisParent.children();
+                        //         console.log($thisItem[0]);
+                        $.each($check,function(idx,item){
+                            
+
+
+                                if(item.checked==true){
+                          
+                                    //结算
+                                   var father= item.parentNode;
+                                   console.log(father)
+                                   var children=father.childNodes;
+                                   var res=children[5].innerHTML.slice(1);
+                                   price+=res*1;
+                                }
+                            
+                     
+                    
+                            
+                        
+                        });
+                        $('.totalPrice').text('￥'+price+'.00');
                     });
                     $('.jian').on('click',function(){
                         var num=$(this).siblings().eq(0).val();
@@ -148,6 +183,39 @@ require(['config'],function(){
                         if(num<0){
                             return;
                         }
+                        //结算
+                        var $check=$('.checkbtn');
+                        var $thisParent=$(this).parent().parent();
+                        var $thisItem=$thisParent.children();
+                                // console.log($thisItem[0]);
+                         var price=0;
+                         var priceTotal=$('.totalPrice').text().slice(1);
+                         console.log(priceTotal)
+                        $.each($check,function(idx,item){
+                           
+
+                                if(item.checked==true){
+                                    if($thisItem[0]==item){
+
+                                       var father= item.parentNode;
+                                       console.log(father)
+                                       var children=father.childNodes;
+                                       var res1=children[3].innerHTML.slice(1);
+                                         var res=children[5].innerHTML.slice(1);
+                                         console.log(res,res1);
+                                       price+=priceTotal*1-res1*1;
+                                    }
+                          
+                                    //结算
+                                }
+                                    $('.totalPrice').text('￥'+price+'.00');
+                            
+                     
+                    
+                            
+                        
+                        });
+                        //小计
                         $(this).siblings().eq(0).val(num);
                          var price=$(this).parent().prev().text();
                         price=price.slice(1);
@@ -155,27 +223,89 @@ require(['config'],function(){
                         var total=price*num;
                         console.log(total);
                         $(this).parent().next().text('￥'+total)
+                        
                     });
                     $('#allCheck').on('click',function(){
+                        console.log($('.checkbtn'));
+                        var $btn=$('.checkbtn');
+                            var price=0;
                         if($(this)[0].checked==true){
-                            $('.checkbtn').attr('checked',true);
+                            $.each($btn,function(idx,item){
+                                item.checked=true;
+                                
+                                console.log(item.checked)
+                            });
+                              var $total=$('.total');
+                              $.each($total,function(idx,item){
+                                    var res=item.innerHTML.slice(1);
+                                    price+=res*1;
+                                    console.log(price)
+
+                              });
+                              $('.totalPrice').text('￥'+price+'.00');
                             $('.li_q').css({
                                 background:'#FDF0EF'
                             });
                         }else{
-                            $('.checkbtn').removeAttr('checked');
-                            $('.checkbtn').attr('checked',false);
+                            $.each($btn,function(idx,item){
+                                item.checked=false;
+                                console.log(item.checked)
+                                 $('.totalPrice').text('￥'+price+'.00');
+
+
+                            })
                              $('.li_q').css({
                                 background:'#fff'
                             });
 
                         }
                     });
+                    
+                    
+                    $('.checkbtn').on('click',function(){
+                        var $check=$('.checkbtn');
+                            var j=0;
+                            var i=0;
+                            var price=0;
+                        $.each($check,function(idx,item){
+                            if(item.checked==true){
+                                i++;
+                                //结算
+                               var father= item.parentNode;
+                               var children=father.childNodes;
+                               var res=children[5].innerHTML.slice(1);
+                               price+=res*1;
+                            }
+                            // j=idx+1;
+                            j++;
+                            
+                        
+                        });
+                        $('.totalPrice').text('￥'+price+'.00');
+                        console.log(i,j)
+                        if(i==j){
+                            $('#allCheck')[0].checked=true;
+                        }else{
+                            $('#allCheck')[0].checked=false;
+
+                        }
+                        if($(this)[0].checked==true){
+                            $(this).parent().css({
+                                background:'#FDF0EF'
+                            })
+                        }else{
+                            $(this).parent().css({
+                                background:'#fff'
+                            })
+                        }
+                        
+                       
+                    })
+                    //点击实现删除购物车商品效果
                     $('a').on('click',function(){
 
                         var id=$(this).attr('class');
                         $(this).parent().remove();
-
                         console.log(id)
                         var goods='';
                         var cookies=document.cookie;
@@ -197,7 +327,7 @@ require(['config'],function(){
                                     var now=new Date();
                                     now.setDate(now.getDate()+7);
                                     document.cookie='goods='+JSON.stringify(goods)+';expires='+now.toUTCString()+';path=/';
-                                       function xie(){
+                                function xie(){
                                     var cookies =document.cookie;
                                     cookies=cookies.split('; ');
                                     cookies.forEach(function(item){
@@ -244,15 +374,113 @@ require(['config'],function(){
                             }
 
                         })
-
-
                     });
+                    
 
                 }
 
             })
+       })();
+       //数据生成猜你喜欢商品列表
+       (function(){
+            // var i=0;
+            $.ajax({
+                type:'get',
+                url:'../api/details.php',
+                dataType:'json',
+                success:function(res){
+                    console.log(res);
+                    for(var i=0;i<res.length-50;i++){
+                       
+                            var $li=$('<li/>').css({
+                                float:'left'
+                            });
+                            var $a=$('<a href="goodslist.html"></a>');
+                            var $img=$('<img src="'+res[i].imgurl+'"/>').css({
+                                width:'80px',
+                                height:'80px',
+                                border:'1px solid #ccc',
+                            });
+                            var $p=$('<p>'+res[i].name+'<br/>价格:￥'+res[i].price+'</p>');
+                            // var $span=$('<span/>').text();
+                            // $p.append($span);
+                            $a.append($img,$p);
+                            $li.append($a);
+                            $('.guess_g').append($li);
+                            
+                    }
 
+                    
+                }
+
+
+            })
        })(); 
-         
+       //点击左右按钮实现猜你喜欢商品列表滚动
+       (function(){
+           var left=0;
+           var right=0;
+            $('.left_').on('click',function(){
+                if(left<=-6288){
+                    left=-6288;
+                    return;
+                }
+                left+=-1048;
+                // console.log(999)
+                $('.guess_g').animate({
+                    left:left
+                },1000);
+            });
+           $('.right_').on('click',function(){
+                
+                left+=1048;
+                if(left>=20){
+                    left=10;
+                    return;
+                }
+                $('.guess_g').animate({
+                    left:left
+                },1000);
+            });
+       })();
+       function jiesuan(){
+         var price=0;
+            $.each($check,function(idx,item){
+                    if(item.checked==true){
+                      
+                        //结算
+                        var father= item.parentNode;
+                        console.log(father)
+                        var children=father.childNodes;
+                        var res=children[5].innerHTML.slice(1);
+                        price+=res*1;
+                    }
+                     
+                    
+                            
+                        
+            });
+            $('.totalPrice').text('￥'+price+'.00');
+       }
+       // (function(){
+       //      $('#allCheck1').on('click',function(){
+ 
+       //          var $check=$(':checkbox');
+       //          console.log($check)
+       //          if($(this)[0].checked==true){
+       //              $.each($check,function(idx,item){
+       //                  item.checked=true;
+
+       //              });
+       //          }else{
+       //              $.each($check,function(idx,item){
+       //                  item.checked=true;
+
+       //              });
+
+       //          }
+
+       //      });
+       // })();
     });
 })

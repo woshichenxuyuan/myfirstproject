@@ -8,12 +8,12 @@ main .container {
   padding: 56px;
 }
 
-main .container ul {
+main .container .goodsLists {
   background: #fff;
   width: 100%;
 }
 
-main .container ul li {
+main .container .goodsLists li {
   padding-top: 22px;
   display: block;
   height: 120px;
@@ -23,67 +23,67 @@ main .container ul li {
   border-bottom: 1px solid #ccc;
 }
 
-main .container ul li img {
+main .container .goodsLists li img {
   width: 60px;
   height: 60px;
 }
 
-main .container ul li .checkbtn {
+main .container .goodsLists li .checkbtn {
   margin: 33px 0 0 60px;
 }
 
-main .container ul li p {
+main .container .goodsLists li p {
   display: block;
   width: 300px;
 }
 
-main .container ul li p img {
+main .container .goodsLists li p img {
   margin-left: 10px;
 }
 
-main .container ul li p span {
+main .container .goodsLists li p span {
   display: block;
   width: 200px;
 }
 
-main .container ul li .price {
+main .container .goodsLists li .price {
   margin-left: 90px;
   color: red;
 }
 
-main .container ul li .del {
+main .container .goodsLists li .del {
   margin-left: 80px;
   margin-right: 90px;
 }
 
-main .container ul li .del input {
+main .container .goodsLists li .del input {
   width: 50px;
   border: 1px solid #ccc;
 }
 
-main .container ul li .del button {
+main .container .goodsLists li .del button {
   width: 20px;
   height: 17px;
 }
 
-main .container ul li a:hover {
+main .container .goodsLists li a:hover {
   color: orange;
   text-decoration: underline;
 }
 
-main .container ul li .total {
+main .container .goodsLists li .total {
   width: 161px;
   color: red;
 }
 
-main .container ul li:nth-child(1) {
+main .container .goodsLists li:nth-child(1) {
   padding: 0;
   background: #ECECEC;
   width: 100%;
   height: 50px;
 }
 
-main .container ul li:nth-child(1) span {
+main .container .goodsLists li:nth-child(1) span {
   display: block;
   float: left;
   width: 14%;
@@ -91,6 +91,123 @@ main .container ul li:nth-child(1) span {
   line-height: 50px;
 }
 
-main .container ul li:nth-child(1) span:nth-child(2) {
+main .container .goodsLists li:nth-child(1) span:nth-child(2) {
   width: 172px;
+}
+
+main .container .guess_y {
+  position: relative;
+  background: #fff;
+  margin-top: 50px;
+  padding: 20px;
+  height: 213px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  overflow: hidden;
+}
+
+main .container .guess_y .left_ {
+  position: absolute;
+  top: 100px;
+  left: 4px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  line-height: 30px;
+  color: #ccc;
+  z-index: 1000;
+}
+
+main .container .guess_y h2:hover {
+  background: pink;
+}
+
+main .container .guess_y .right_ {
+  position: absolute;
+  top: 100px;
+  left: 1055px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  line-height: 30px;
+  color: #ccc;
+  z-index: 1000;
+  text-align: center;
+}
+
+main .container .guess_y ul {
+  display: block;
+  width: 10000px;
+  position: absolute;
+  left: 20px;
+  top: 30px;
+}
+
+main .container .guess_y ul li {
+  display: block;
+  width: 200px;
+  margin-left: 17px;
+}
+
+main .container .guess_y ul li a {
+  display: block;
+  width: 150px;
+  height: 143px;
+}
+
+main .container .guess_y ul li a img {
+  margin-left: 30px;
+}
+
+main .container .guess_y ul li a p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+main .container .settlement {
+  position: relative;
+  width: 1088px;
+  height: 200px;
+  background: #fff;
+  margin-top: 50px;
+  padding: 30px;
+  border: 1px solid #ccc;
+}
+
+main .container .settlement a {
+  display: block;
+  width: 100px;
+  height: 30px;
+  border: 1px solid red;
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  float: left;
+  margin: 100px 0 0 50px;
+}
+
+main .container .settlement .setLeft {
+  width: 500px;
+  height: 178px;
+  position: absolute;
+  top: 20px;
+  left: 586px;
+}
+
+main .container .settlement .setLeft a {
+  margin: 30px 0 0 0px;
+  background: #E93B39;
+  color: #fff;
+}
+
+main .container .settlement .setLeft p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+main .container .settlement .setLeft p span {
+  color: red;
 }
